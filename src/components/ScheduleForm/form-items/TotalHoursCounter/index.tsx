@@ -11,12 +11,20 @@ export const CalendarCounter = () => {
 		defaultValue: 4,
 	});
 
+	const { field: hoursPerDayField } = useController({
+		name: "hoursPerDay",
+		control,
+	});
+
 	const handleIncrement = () => {
 		field.onChange(field.value + 1);
 	};
 
 	const handleDecrement = () => {
-		field.onChange(field.value > 1 ? field.value - 1 : field.value);
+		const newValue = field.value > 1 ? field.value - 1 : field.value;
+		field.onChange(newValue);
+		newValue <= hoursPerDayField.value && hoursPerDayField.onChange(newValue);
+
 	};
 
 	return (

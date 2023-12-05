@@ -48,7 +48,8 @@ $bordersSize: 1px;
 
   &[data-active="true"] {
     border-color: var(--blue-20);
-    background-color: var(--blue-06);
+    background-color: #007ad9;
+    color: white;
   }
 }
 
