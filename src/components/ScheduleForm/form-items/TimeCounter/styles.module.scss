@@ -3,7 +3,6 @@
   align-items: center;
   height: 50px;
   border-radius: 10px;
-  margin-left: 10px;
   padding-left: 10px;
   width: 250px;
   border: 0.5px solid #bac1c5;
@@ -12,6 +11,7 @@
 
 .timeTo {
   margin-right: 0;
+  padding: 10px;
 }
 
 .value {
@@ -28,11 +28,6 @@
   color: white;
   margin-right: 7px;
   margin-left: 7px;
+
 }
 
-@media (max-width: 980px) {
-  .main {
-    width: 50%;
-    align-self: center;
-  }
-}
