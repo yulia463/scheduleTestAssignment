@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import * as Yup from "yup";
 import { Button, Form, Input, Select, Typography } from "../../shared/ui";
 import styles from "./styles.module.scss";
 import { audiences, hours, pause, teachers } from "../../common/mocks";
@@ -9,16 +10,19 @@ import { CounterStudyHours } from "./form-items/HoursPerDayCounter";
 import { TimeCounter } from "./form-items/TimeCounter";
 import { Hour, Pause, ScheduleFormType } from "../../common/types";
 import { WeekDaysPicker } from "./form-items/WeekDaysPicker/WeekDaysPicker";
-
+import { yupResolver } from "@hookform/resolvers/yup";
 
 type ScheduleFormProps = {
   onModalClose: () => void;
 }
 
+const scheduleFormValidationSchema = Yup.object().shape({
+	title: Yup.string().required("Обязательное поле!")
+});
 
 export const ScheduleForm: React.FC<ScheduleFormProps> = (props) => {
 
-	const form = useForm<ScheduleFormType>({
+	const form = useForm<Partial<ScheduleFormType>>({
 		defaultValues: {
 			title: "",
 			color: "#000000",
@@ -26,18 +30,26 @@ export const ScheduleForm: React.FC<ScheduleFormProps> = (props) => {
 			pauseDurationMin: Pause.PAUSE_0,
 			hoursPerDay: 2.5,
 		},
+		resolver: yupResolver(scheduleFormValidationSchema)
 	});
 
-	const handleSubmitForm = (data: ScheduleFormType) => {
-		console.log("data>>>>", data);
+	const handleSubmitForm = (data: Partial<ScheduleFormType>) => {
+		const dataToSend = {
+			...data,
+			timeFrom: data.timeFrom.getTime(),
+			timeTo: data.timeTo.getTime(),
+			startDate: new Date(data.startDate).toLocaleDateString("ru-RU")
+		};
+		console.log("final form data>>>>", dataToSend);
 	};
 
 	return (
 		<Form form={form} onSubmit={handleSubmitForm} className={styles.form}>
 			<div className={styles.upperBlock}>
 				<Form.Item name="title" label="" className={styles.inputTitle}>
-					<Input placeholder="Онлайн-школа"/>
+					<Input error={String(form.formState.errors.title)} placeholder="Онлайн-школа"/>
 				</Form.Item>
+
 				<div className={styles.colorBlock}>
 					<Typography color="secondary">Цвет группы:</Typography>
 					<Form.Item name="color">

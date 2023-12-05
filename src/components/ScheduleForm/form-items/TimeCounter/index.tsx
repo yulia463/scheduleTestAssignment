@@ -24,13 +24,11 @@ export const TimeCounter = () => {
 	const hoursPerDay = watch("hoursPerDay");
 
 	useEffect(() => {
-		console.log(hoursPerDay, timeFromField.value , hourType, pauseDurationMin);
 		timeToField.onChange(calculateNewCourseEndTime(
 			hoursPerDay,
 			timeFromField.value, hourType, pauseDurationMin));
 	}, [hoursPerDay, timeFromField.value, hourType, pauseDurationMin]);
 
-	console.log("here>>", format(timeFromField.value, "HH:mm"));
 	return (
 		<div className={styles.main}>
 			<Typography as="span" className={styles.timeTo}>{format(timeFromField.value, "HH:mm")}</Typography>

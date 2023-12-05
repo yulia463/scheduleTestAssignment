@@ -30,8 +30,12 @@ export const hours: Array<{ title: string, value: Hour }> = [
 
 export const pause: Array<{ title: string, value: Pause }> = [
 	{ title: "Без перерыва", value: Pause.PAUSE_0 },
+	{ title: "С перерывом 5 минут", value: Pause.PAUSE_5_MIN },
 	{ title: "С перерывом 10 минут", value: Pause.PAUSE_10_MIN },
 	{ title: "С перерывом 15 минут", value: Pause.PAUSE_15_MIN },
+	{ title: "С перерывом 20 минут", value: Pause.PAUSE_20_MIN },
+	{ title: "С перерывом 25 минут", value: Pause.PAUSE_25_MIN },
+	{ title: "С перерывом 30 минут", value: Pause.PAUSE_30_MIN },
 ];
 
 
