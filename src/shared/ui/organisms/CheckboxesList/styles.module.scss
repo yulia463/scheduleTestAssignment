@@ -1,0 +1,26 @@
+.list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  color: var(--title-primary-color);
+  cursor: pointer;
+  transition: var(--primary-transition);
+  &:active {
+    box-shadow: 0px 0px 0px  2px var(--border-secondary);
+  }
+
+  &[data-active="true"] {
+    box-shadow: 0px 0px 0px  2px var(--border-secondary);
+  }
+}

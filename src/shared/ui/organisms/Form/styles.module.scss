@@ -1,0 +1,37 @@
+.form {
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.labelText {
+  display: inline-block;
+  color: var(--black-64);
+  font-weight: 500 !important
+}
+
+.error {
+  display: block;
+  height: 16px;
+  margin-top: 8px;
+  color: var(--primary-text-error);
+  font-size: 16px;
+  opacity: 0;
+  transition: var(--primary-transition);
+
+  &[data-visible="true"] {
+    opacity: 1;
+  }
+}
+

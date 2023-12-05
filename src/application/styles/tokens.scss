@@ -1,0 +1,64 @@
+@import "./palette.scss";
+
+html, body {
+  --app-height: 100vh;
+  --background-primary: #{$white100};
+  --background-secondary: #{$beige100};
+  --background-tertiary: #{$gray100};
+
+  --blue-100: #{$blue100};
+  --blue-80: #{$blue80};
+  --blue-32: #{$blue32};
+  --blue-20: #{$blue20};
+  --blue-16: #{$blue16};
+  --blue-06: #{$blue06};
+  --blue-0: #{$blue0};
+
+  --dark-blue-100: #{$dark-blue100};
+  --dark-blue-50: #{$dark-blue50};
+
+  --white-100: #{$white100};
+  --white-16: #{$white16};
+  
+  --gray-40: #{$background-gray};
+
+  --black-80: #{$black80};
+  --black-64: #{$black64};
+  --black-48: #{$black48};
+  --black-24: #{$black24};
+  --black-08: #{$black08};
+
+  --pink-100: #{$pink100};
+  --pink-06: #{$pink06};
+
+  --violet-100: #{$violet100};
+  --violet-06: #{$violet06};
+
+  --dark-blue-50: #{$dark-blue50};
+  
+  --green-100: #{$green100};
+  --green-06: #{$green06};
+
+
+  --orange-100: #{$orange100};
+  --orange-06: #{$orange06};
+
+
+  --red-100: #{$red100};
+  --red-06: #{$red06};
+
+  // Text Tokens
+  --title-primary-color: #{$dark-blue100};
+  --text-ghost-color: #{$white40};
+
+  --secondary-text-default: #{$black80};
+  --secondary-text-hovered: #{$blue100};
+  --secondary-text-disabled: #{$black24};
+
+
+  --shadow-primary: 0px 2px 8px rgba(27, 45, 65, 0.08);
+  --primary-transition: 0.25s;
+  --border-primary: #{$border-gray-primary};
+  --border-secondary: #{$blue40};
+  --primary-text-error: #{$red100};
+}

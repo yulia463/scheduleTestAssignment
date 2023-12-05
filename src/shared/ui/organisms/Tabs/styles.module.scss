@@ -1,0 +1,54 @@
+$sideButtonsRadius: 8px;
+$bordersSize: 1px;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  :hover {
+    color: var(--secondary-text-default) !important;
+  }
+}
+
+.tabItem {
+  padding: 0 !important;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  box-shadow: none !important;
+  font-weight: 500;
+  white-space: nowrap;
+
+
+  &:first-child {
+    &:not(:last-child) {
+      border-right-width: 0;
+      border-bottom-left-radius: $sideButtonsRadius;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $sideButtonsRadius;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &:last-child {
+    &:not(:first-child) {
+      border-right-width: $bordersSize;
+      border-left-width: 0;
+      border-bottom-right-radius: $sideButtonsRadius;
+      border-top-right-radius: $sideButtonsRadius;
+    }
+  }
+
+  &[data-active="true"] {
+    border-color: var(--blue-20);
+    background-color: var(--blue-06);
+  }
+}
+

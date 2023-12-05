@@ -1,0 +1,45 @@
+$dark-blue100: #1B2D41;
+$dark-blue50: #25476E;
+
+$blue100: #0F6FB0;
+$blue80: transparentize($blue100, 0.2);
+$blue40: transparentize($blue100, 0.6);
+$blue20: transparentize($blue100, 0.8);
+$blue32: transparentize($blue100, 0.68);
+$blue16: transparentize($blue100, 0.84);
+$blue06: transparentize($blue100, 0.94);
+$blue0: transparentize($blue100, 1);
+
+$black100: rgb(27, 45, 65);
+$black80: transparentize($black100, 0.2);
+$black64: transparentize($black100, 0.36);
+$black48: transparentize($black100, 0.52);
+$black24: transparentize($black100, 0.76);
+$black08: transparentize($black100, 0.92);
+
+$white100: rgb(255, 255, 255);
+$white16: transparentize($white100, 0.84);
+$white40: #DCDFE4;
+$beige100: #EEEEEE;
+
+$pink100: rgb(232, 103, 149);
+$pink06: transparentize($pink100, 0.94);
+
+$violet100: #8053E7;
+$violet06: transparentize($violet100, 0.94);
+
+$red100: #e01f2e;
+$red06: transparentize($red100, 0.94);;
+
+$gray100: #FCFCFD;
+
+$green100: #58C69E;
+$green06: transparentize($green100, 0.94);
+
+
+$orange100: #F7861D;
+$orange06: transparentize($orange100, 0.94);
+
+$background-gray: rgba(247, 248, 250, 0.4);
+$border-gray-primary: rgb(233, 235, 239);
+$border-gray-secondary: rgb(223, 226, 231);

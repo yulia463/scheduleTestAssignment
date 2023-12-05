@@ -1,0 +1,11 @@
+.option {
+  &:hover {
+    background-color: var(--text-ghost-color);
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+
+  border-radius: 0;
+}

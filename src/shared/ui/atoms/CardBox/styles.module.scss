@@ -1,0 +1,27 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: var(--background-primary);
+  box-shadow: var(--shadow-primary);
+
+  &[data-size="s"] {
+    padding: 12px;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+  }
+
+
+  &[data-size="m"] {
+    padding: 24px;
+    border: 1px solid var(--border-primary);
+    border-radius: 16px;
+  }
+
+  &[data-size="l"] {
+    padding: 24px;
+    border: 1px solid var(--border-primary);
+    border-radius: 16px;
+  }
+}

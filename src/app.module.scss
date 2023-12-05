@@ -1,0 +1,16 @@
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 70%;
+}
+
+@media (max-width: 800px) {
+  .modal{
+    width: 100%;
+  }
+}

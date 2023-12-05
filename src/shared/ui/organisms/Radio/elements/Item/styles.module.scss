@@ -1,0 +1,42 @@
+.item {
+  &Classic {
+    position: relative;
+    width: 100%;
+    padding-left: 28px;
+    list-style-type: none;
+    
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--text-ghost-color);
+      border-radius: 50%;
+      content: "";
+      transform: translateY(-50%);
+      transition: var(--primary-transition);
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--white-100);
+      content: "";
+      transform: translateY(-50%);
+    }
+   
+    &[data-active="true"] {
+      &::before {
+        border-color: var(--blue-100);
+        background-color: var(--blue-100);
+      }
+    }
+  }
+}

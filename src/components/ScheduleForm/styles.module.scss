@@ -1,0 +1,92 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.upperBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputTitle {
+  max-width: 40%;
+}
+
+.colorBlock {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.inputColor {
+  border: 1px solid var(--border-primary);
+  background-color: white;
+  padding-right: 40px;
+  padding-bottom: 5px;;
+  padding-top: 5px;;
+  border-radius: 4px;
+  width: 70px;
+  height: 45px;
+}
+
+.hoursBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.hoursTypeInput {
+  margin-right: 10px;
+  width: 300px;
+}
+
+.pauseTypeSelect {
+  width: 350px;
+}
+
+.buttons {
+  align-self: end;
+}
+
+.lastBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.infoDiv{
+  background-color: var(--pink-100);
+  padding: 15px;
+}
+
+@media(max-width: 990px) {
+  .hoursBlock{
+    flex-direction: column;
+    gap: 15px;
+  };
+  .pauseTypeSelect,
+  .hoursTypeInput{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .upperBlock{
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+  }
+  .colorBlock{
+    width: 100%;
+  }
+  .inputTitle{
+    max-width: 100%;
+  }
+  .lastBlock{
+    flex-direction: column;
+  }
+}
