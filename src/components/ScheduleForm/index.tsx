@@ -11,6 +11,7 @@ import { TimeCounter } from "./form-items/TimeCounter";
 import { Hour, Pause, ScheduleFormType } from "../../common/types";
 import { WeekDaysPicker } from "./form-items/WeekDaysPicker/WeekDaysPicker";
 import { yupResolver } from "@hookform/resolvers/yup";
+import {format} from "date-fns";
 
 type ScheduleFormProps = {
   onModalClose: () => void;
@@ -36,8 +37,8 @@ export const ScheduleForm: React.FC<ScheduleFormProps> = (props) => {
 	const handleSubmitForm = (data: Partial<ScheduleFormType>) => {
 		const dataToSend = {
 			...data,
-			timeFrom: data.timeFrom.getTime(),
-			timeTo: data.timeTo.getTime(),
+			timeFrom: format(data.timeFrom,"hh:mm"),
+			timeTo: format(data.timeTo,"hh:mm"),
 			startDate: new Date(data.startDate).toLocaleDateString("ru-RU")
 		};
 		console.log("final form data>>>>", dataToSend);
