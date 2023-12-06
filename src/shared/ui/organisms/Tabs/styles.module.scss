@@ -4,7 +4,7 @@ $bordersSize: 1px;
 .root {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .header {

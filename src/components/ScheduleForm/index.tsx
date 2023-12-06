@@ -78,9 +78,7 @@ export const ScheduleForm: React.FC<ScheduleFormProps> = (props) => {
 				<HoursCounter/>
 			</div>
 
-			<Form.Item name={"weekdays"}>
-				<WeekDaysPicker/>
-			</Form.Item>
+			<WeekDaysPicker/>
 
 			<div className={styles.hoursBlock}>
 				<Form.Item name="pauseDurationMin" className={styles.pauseTypeSelect}>
