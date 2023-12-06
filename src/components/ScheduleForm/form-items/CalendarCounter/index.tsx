@@ -27,14 +27,8 @@ export const HoursCounter = () => {
 	const hoursPerDay = watch("hoursPerDay");
 
 	useEffect(() => {
-		console.log("totalHours:", totalHours);
-		console.log("hoursPerDay:", hoursPerDay);
-		console.log("startDateField.value:", startDateField.value);
-		console.log("weekdays:", weekdays);
-
 		endDateField.onChange(calculateNewCourseEndDate(totalHours, hoursPerDay, new Date(startDateField.value), weekdays)?.toLocaleDateString("ru-RU"));
 
-		console.log("newEndDate:");
 	}, [totalHours, hoursPerDay, startDateField.value, weekdays]);
 
 	return (

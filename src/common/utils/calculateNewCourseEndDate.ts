@@ -3,6 +3,9 @@ import { addDays } from "date-fns";
 export const calculateNewCourseEndDate = (totalHours: number, hoursPerDay: number, initialDate: Date, selectedDaysOfWeek: number[]) => {
 	let remainingHours = totalHours;
 	let currentDate = initialDate;
+	if(selectedDaysOfWeek?.length === 0){
+		return currentDate;
+	}
 
 	for (let currentHour = 0; remainingHours > 0 && remainingHours >= hoursPerDay; currentHour++) {
 		currentDate = addDays(currentDate, 1);
