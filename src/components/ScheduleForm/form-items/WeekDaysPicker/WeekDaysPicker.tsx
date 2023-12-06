@@ -24,19 +24,6 @@ export const WeekDaysPicker: FC = () => {
 			field.onChange(value);
 		}
 	};
-	// const handleChange = (value: WeekDays | Array<WeekDays>) => {
-	// 	if (typeof value === "number"){
-	// 		const currentValue = Array.isArray(field.value) ? field.value : [field.value];
-	//
-	// 		let newValue = currentValue.some((item) => item === value)
-	// 			? currentValue.filter((item) => item !== value)
-	// 			: [...currentValue, value];
-	// 		if (!newValue.length) newValue = null;
-	// 		field.onChange(newValue);
-	// 	} else {
-	// 		field.onChange(value);
-	// 	}
-	// };
 
 	const activeValues = field.value;
 
